@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Salebarn</title>
+    <description>SALEBARN is about DISTRIBUTED FREEDOM. We extend FREE and accelerated discovery and negotiation technology to provide greater transparency, value, information from FREE and open markets.</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 13 Jul 2017 09:27:21 -0500</pubDate>
+    <lastBuildDate>Thu, 13 Jul 2017 09:27:21 -0500</lastBuildDate>
+    <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>Data Science for Site Reliability</title>
+        <description>&lt;p&gt;First of all, if your sales and marketing infrastructure is not your very most important business infrastructure, don’t read any further … seriously … this Salebarn technology blog post is definitely not for people who do not have to worry about the quality of the interaction with their customers.&lt;/p&gt;
+
+&lt;p&gt;Second of all, this Salebarn technology blog post is about absolutely RELYING on web, mobile, SMS communication IT in order to effect a MORE DIRECT, MORE PERSONAL, MORE CONTINUOUS, HIGHER QUALITY relationship with your customers … this second warning is even more seriously than the first … if you have already permanently decided that you will never be able to trust a technological communication channel, don’t read any further … this Salebarn technology blog post is definitely not for people who do not understand that their customers WANT to be engaged primarily over technological communication channels, so that they don’t have to waste time driving around or doing things inefficiently in order to find interesting products, services, people.&lt;/p&gt;
+
+&lt;p&gt;Finally and most seriously, this Salebarn technology blog post is NOT the solution to all of your problems in this topical realm … if you are looking for either magic bullets or permanent lasting fixes, GO AWAY … continuously updated, upgraded KNOWLEDGE is the solution to those problems and it will be necessary to continually upgrade and update that knowledge.&lt;/p&gt;
+
+&lt;p&gt;If you find this blog post helpful, GREAT … no need to thank us; as with ALL bloggers in the history of blogging – we wrote this posting for ourselves – it is part of our own training plan … as all educators knows, it is the attempting to train others that trains us the best, ie no one can possibly learn more in any classroom than the teacher carefully, thoughtfully presenting the material in that classroom.&lt;/p&gt;
+
+&lt;p&gt;This particular blog post is intended to be somewhat evergreen – but, of course, a technology post obviously CANNOT POSSIBLY BE truly evergreen.  As with ALL podcasts, especially podcasts in the ‘technology’ category, this podcast will be dated even before it is saved, before it is published.&lt;/p&gt;
+
+&lt;p&gt;If you find our approach to problem solving and building knowledge useful and want us to apply our expertise to YOUR particular problem, we are available for hire … although we are not particularly anxious to find more work, so our one-on-one user-specific consultations and training seminars are not free … they will be worth several times more than what they cost you, but they not free.&lt;/p&gt;
+
+&lt;h1 id=&quot;site-reliability&quot;&gt;Site Reliability&lt;/h1&gt;
+
+&lt;p&gt;This post is about making your most important infrastructure MORE RELIABLE … it is about OWNING the part of your network that your customers see and depend upon … even if you own NOTHING beneath the top surface of the skin of what customers see – THAT is all that matters to the infrastructure of your customer interaction and your network of customers.  It will be absolutely necessary to build that trusted network from underlying components that you cannot depend upon in the future and and should never, ever, ever trust … trust is like a hotel room – you do not and cannot EVER own trust, you must RENT it and it is up to YOU to engineer and ensure its reliability.  Reliability is partly about REDUNDANCY, but it is about constant vigilance and SITUATIONAL AWARENESS of where the vulnerabilities and weaknesses are.  A watched pot never boils, but when it does, you immediately make a switch … before the customer ever experiences a scalding spillover from that boiling pot.&lt;/p&gt;
+
+&lt;p&gt;Increasingly … sometimes, so much so that it makes me NERVOUS … I find that I depend more and more upon the adult professionals who run AWS … that does not exactly mean that there is nothing to learn about site reliability from Microsoft, IBM, Google or other cloud providers or the professionals who work for them, but it does mean that I will START by looking at how AWS and companies that use AWS, eg Netflix, when I want to think about the starting point for a set of best practices in site reliability. This will change – currently, AWS dominates the world of cloud providers with approximately 1/3 of the market share [and still gaining share at the expense of others] because it is, hands down, the most reliable and dependable option … but some day, someone else will assemble a team better than the one assembled by Werner Vogels at AWS and develop a more reliable and dependable mousetrap.&lt;/p&gt;
+
+&lt;p&gt;First of all we should think about FUNDAMENTALS … introductory site reliability concepts and general benefits of cloud computing along with an overview of Amazon Web Services and its overall platform.  For example, you should understand what things like “Zero Trust Networks” are about before dismissing terms like this as mere marketing buzzwords. It is necessary to be paranoid, to ASSUME some MF’er who hates you is going to make a point of taking your infrastructure DOWN … build ONLY from the synthetic bedrock which you construct – assume that you can trust nothing.  ## Certification. Never dismiss the importance of reviewing the fundamentals, getting the basics right … a MASTER always returns to working on the fundamentals … that is why certifications and bodies-of-knowledge studied to pass certification exams will continue to be important.  Even if you do not take the certification exam, at least learn the jargon, how to SPEAK THE LANGUAGE and USE THE TOOLS before … LONG BEFORE … you start down the road of making really, really expensive mistakes.  You WILL make mistakes … and when you do, it will get really scary and REALLY EXPENSIVE in a hurry if you did not take the time to master the fundamentals.&lt;/p&gt;
+
+&lt;p&gt;Next, it is necessary to think about security and access management and how to best achieve it using an AWS core service known as Identity and Access Management (IAM). Conceptually, you really need to START with an understanding of the rationale behind correctly executing the steps required to create and administer AWS users, groups, as well as how to create and assign permissions and policies to them.&lt;/p&gt;
+
+&lt;p&gt;LONG after the fundamentals are mastered … and after security and access management is also mastered … we can start getting some hands-on knowledge about EC2 instances and images, and how you can create and manage them using both the AWS Management Console as well as the AWS CLI before we get into providing added, more specific security for your applications and instances. This means understanding at an in-depth level things like Simple Storage Service or Amazon’s infinitely scalable and durable object storage known as Amazon S3 as well as Amazon’s Database-as-a-Service options and EC2 instance storage as well as networking options and what experienced professionals recommend as a starting point for your best practices.  Moving on from this, we can think about building your own private clouds Using Amazon VPC including another in-depth look at various VPC deployment strategies and how people have best leveraged that capability for their own [somewhat] unique environments.&lt;/p&gt;
+
+&lt;p&gt;It is impossible to build an impenetrable fortress that is never attacked or never goes down … even if your little fortress never does anything with anyone or interacts with anyone else and is thus basically unworthy of any attackers time, there is still the question of hardware and software reliability as well as changes in environment that you would not expect to effect your system.  AWS’s primary monitoring service, CloudWatch, is important for effectively creating and managing alerts, loggings, and notifications for your EC2 instances, as well as the AWS environment those instances run in. It is also necessary to manage at scale or to manage your applications with auto scaling and elastic load balancing and to utilize AWS services and EXTENDED AWS services [from AWS as well as independent software vendors] which allow you to leverage to create a dynamically scalable and highly available web application. Understand the BASICS, but before you complain about the limits in those basic services or hack your own infrastructure-as-code to improve on them, take a brief look at the add-on AWS services that you can leverage for enhancing your applications’ performance and availability, ie the real value of going with the dominant provider is that ecosystem is large enough that someone else has probably already solved that problem.&lt;/p&gt;
+
+&lt;h2 id=&quot;data-science-for-security-professionals&quot;&gt;Data Science For Security Professionals&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;TBD&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;*TBD TBD TBD TBD TBD  and much more TBD … the following ruminations, currently in-process will be from what I gain preparing to take part in a class that I am excited about … maybe you want to sign up for that class &lt;a href=&quot;https://www.safaribooksonline.com/live-training/courses/data-science-for-security-professionals/0636920095781/&quot;&gt;Data Science for Security Professionals&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Introduction: Data Preparation with Pandas (15 Min)
+What is Pandas and why use it?
+The Series, DataFrame, and Panel objects
+The Pandas ecosystem: Scikit-learn, Seaborn, Bokeh
+Vectorized Computing in One Dimension: The Series Object (90 Min)
+Creating a series
+Describing data
+Filtering data
+Other operations on data
+Activity: Worksheet
+Vectorized Computing in Two Dimensions: The DataFrame (90 min)
+Creating a DataFrame
+Reading logfiles, APIs and other sources
+Manipulating data in data frames
+Applying functions to data frames
+Aggregating data in data frames
+Activity: DataFrame Worksheet
+Homework: You’ll receive a series of data sources to prepare for analysis
+DAY 2—EXPLORE YOUR DATA&lt;/p&gt;
+
+&lt;p&gt;On day two, you’ll learn the concepts and techniques behind exploratory data analysis as well as practical data visualization techniques.
+Statistical Summaries (90 Min)
+5-Number summaries
+Normalizing data
+Understanding Distributions
+Correlations
+Confidence Intervals and P-Values
+Exercise: Complete EDA Worksheet
+Concepts of Data Visualization (30 Min)
+Creating effective visualizations
+Choosing the correct visualization
+Using visualization to explore data
+Practical Data Visualization (90 Min)
+Using Matplotlib to create basic charts
+Overview of advanced charts with Seaborn
+Creating dashboards with Superset
+Homework: Complete visualization worksheet
+DAY 3—LEARN FROM IT&lt;/p&gt;
+
+&lt;p&gt;Day three will introduce the machine learning process. We will cover model selection, feature engineering, and model evaluation.
+Machine Learning Concepts (60 Min)
+Machine learning process
+Machine learning problem types
+Supervised vs Unsupervised machine learning
+Unsupervised Machine Learning in Practice (60 Min)
+Distance measures
+Nearest Neighbors
+K-Means
+Exercise: K-Means Worksheet
+Supervised Machine Learning: Classification (60 Min)
+Feature engineering
+Modeling with Decision Trees and Support Vector Machines
+Model evaluation
+Case Study: Classifier to identify SQL Injection
+Final Project: DGA Classifier&lt;/p&gt;
+</description>
+        <pubDate>Mon, 10 Jul 2017 12:00:00 -0500</pubDate>
+        <link>/technology/2017/07/10/Data-Science-Site-Reliability.html</link>
+        <guid isPermaLink="true">/technology/2017/07/10/Data-Science-Site-Reliability.html</guid>
+        
+        
+        <category>Technology</category>
+        
+      </item>
+    
+      <item>
+        <title>3125-625-125-25-5 Prospecting Funnel</title>
+        <description>&lt;p&gt;Salebarn builds tools to be absolutely MANIACALLY focused on accelerating a negotiation in a way that involves SERVING qualified, paying customers.&lt;/p&gt;
+
+&lt;p&gt;In order to serve that paying customer with an efficient, satisfying, beneficial accelerated negotiation … we must find ways to engage QUALIFIED customer; we don’t want to waste ANY of the time or attention span of people who are not interested OR will never be able to complete a negotiation … it USED TO BE that this involved getting out and meeting people and making 25 new face-to-face contacts per day with potentially interested people, advertising and interesting target populations of potential customers in a product, putting up a high-quality bricks-and-mortar store OR holding really entertaining promotional events or auctions … communication technology, social media and smartphones has revolutionized how these things are done, but even though the approach might be different those tactics are still being used effectively and, to the extent we can make those tactics even more effective, much less costly, much more rapid and generally more satisfying for all involved, new communication networks, information technology and independent providers like can play a role … but there’s no role for anyone who makes things more difficult, less efficient slower.&lt;/p&gt;
+
+&lt;p&gt;The focus of Salebarn is not on the technology, technology helps us implement tools – the Salebarn repeated mantra, our maniac focus is on the accelerating the PERFECT negotiation … that means STARTING off with the correct group of potential customers so entrepreneurs can better find, engage and SERVE QUALIFIED PAYING CUSTOMERS.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-ideas-to-value-funnel&quot;&gt;The Ideas-To-Value Funnel&lt;/h1&gt;
+
+&lt;p&gt;PROSPECTING, first and foremost, is NOT a get-rich-quick scheme … prospectors who get into the game thinking they will get rich quick end up buy all kinds of gear they don’t need from people who do get rich quick selling overpriced stuff to greedy SUCKERS.&lt;/p&gt;
+
+&lt;p&gt;You cannot be a greedy SUCKER … you are not going to find enough BIGGER suckers to buy your worthless second-rate product.  Prospecting is NOT about getting your share of a shrinking pie – although competition definitely matters and there’s a place for advocating, advertising and promoting a good idea – prospecting must fundamentally be about increasing the size of the pie, or you are wasting everyone’s time.&lt;/p&gt;
+
+&lt;p&gt;Building, maintaining improving a prospecting funnel is really about developing something that will provide a foundation of wealth generation in an antifragile manner …  the simple construct of a funnel or sieve allows us to use technology to look at the universe of ideas and to narrow the universe down to a practical set of things that represent the highest and best value of everyone’s time. We must look ahead to what we want to see; a simple model or construct provides the vision that informs our more concrete goals as we work out practical details and overcome minor frustrations and little problems. But we do need to look at the BIG picture – to THINK BIG. Ideally, we should envision a system where all involved in terms of things that you can enjoy working on in order to accelerate the process of to provide legitimate value for others [and yourself].&lt;/p&gt;
+
+&lt;h2 id=&quot;i-your-perspective-restricts-your-universe-of-ideas&quot;&gt;I. Your perspective restricts your UNIVERSE of ideas&lt;/h2&gt;
+
+&lt;p&gt;The FIRST restrictor in the funnel is about largely involuntary restrictions on your perspective.  Instead of NARROWING this perspective – we want to think about works at EXPANDING your horizons and really achieving this is HARD.  VERY hard.  Regardless of how large it is, it has to get a lot bigger.  Your horizons necessarily have to be much LARGER than everything that you can merely Google … one of the necessary things you must do in order to expand your perspective is to stop wasting time fitting into human boxes … reduce the time you spend watching TV, looking at things online, reading books, merely FOLLOWING other ideas. You probably need to increase the amount of spend time in nature, hiking, walking, thinking, meditating, praying, fasting or engaged in the duties of &lt;a href=&quot;https://www.amazon.com/Extreme-Ownership-U-S-Navy-SEALs-ebook/dp/B00VE4Y0Z2&quot;&gt;extreme ownership&lt;/a&gt; … do not just follow someone else – DO EXTREME THINGS THAT REALLY MATTER in order to create, learn, explore and expand your horizons … get out of your comfort zone; broaden your own perspective.&lt;/p&gt;
+
+&lt;h2 id=&quot;ii-sticky-monetizable-ideas-that-at-minimum-lend-themselves-to-loyalty-programs-and-distributed-peer-to-peer-ledger-database-accountability&quot;&gt;II. Sticky, monetizable ideas that, at minimum, lend themselves to loyalty programs and distributed peer-to-peer ledger database accountability&lt;/h2&gt;
+
+&lt;p&gt;The second restrictor in this prospecting funnel is about narrowing your choices from your BIG PERSPECTIVE.&lt;/p&gt;
+
+&lt;p&gt;Specifically, the second restrictor is constraining the set of all possible ideas in the universe, to the set of ideas that are valuable enough that they could possibly make money. When you are WORKING in the realm of IDEAS that are may be of monetary value to other productive human beings who have money [and not simply scams to get or take things from other human beings OR to merely be wealthy, powerful or famous], you will SERENDIPITOUSLY discover and build all kinds of brand new useful things, like open source software repositories, that are inordinately valuable to others, even those without money … but you NEED at least a small amount of money to sustain your ability to be creator of art or writer of useful open source repositories … so FOLLOW the MONEY!&lt;/p&gt;
+
+&lt;p&gt;To most effectively look at monetization, we need to look at HOW money works and why humans use money.  Money has been the way human beings keep score. It will probably always be necessary for humans to keep score with some sort of loyalty system or way to incentivize participation. Enlightened monetization, therefore, is really a matter of removing the waste, fraud and abuse from the score-keeping systems humans use to track wealth. An example of a more efficient, robust and anti-fragile score-keeping system are the metrics used by Github. Earlier, but still important score-keeping systems were the reputation management systems of Ebay or StackExchange.  Before that were things like frequently-flier miles, hotel loyalty programs and free-sandwich punchcards used by fast food vendors … before that we can look at things like Gold Bond stamps or Betty Crocker points.&lt;/p&gt;
+
+&lt;h2 id=&quot;iii-thiels-zero-to-one-and-laying-the-foundations-for-the-the-most-scalable-biggest-impact-ideas&quot;&gt;III. Thiel’s Zero-to-One and laying the foundations for the the most scalable, biggest impact ideas.&lt;/h2&gt;
+
+&lt;p&gt;The startup cookbook approach is the next set of funnels and sieves.  There are seven big Questions that all potential business ideas must consider – these Questions effectively provide ways of winnowing down the massive amount of ideas we have in the hopper.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The Engineering Question&lt;/strong&gt;:
+Can you create breakthrough technology (vs. incremental improvement)?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The Timing Question&lt;/strong&gt;:
+Is now the right time to start this particular business?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The Monopoly Question&lt;/strong&gt;:
+Are you starting with a big share of a small market?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The People Question&lt;/strong&gt;:
+Do you have the right team?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The Distribution Question&lt;/strong&gt;:
+Do you have a way to not just create but &lt;strong&gt;deliver&lt;/strong&gt; your product?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The Durability Question&lt;/strong&gt;:
+Will your market position be defensible 10 and 20 years into the future?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The Secret Question&lt;/strong&gt;:
+Have you identified a unique opportunity that others don’t see?&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;AFTER we narrowed our list in this fashion, the next thing to look at is SCALEABILITY … that is basically the next heading.&lt;/p&gt;
+
+&lt;h2 id=&quot;iv-scalability-and-antifragile-community-husbandry-processes&quot;&gt;IV. Scalability and antifragile community husbandry processes&lt;/h2&gt;
+
+&lt;p&gt;Professional brand management and different social commerce strategies are starting to mature. We can look at what works, what doesn’t.  What we are really looking at here are inclusive networks with built-in incentive structures (see above material) that go beyond merely spreading ideas, but enlist people to take them further, develop and extend the ideas for their purposes and yet continue to participate in advancing the value proposition of the general idea.&lt;/p&gt;
+
+&lt;p&gt;This stages gets to be partly about LETTING GO … not just giving others the opportunity to USE and OWN the idea, but encouraging them to hack something bigger.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 02 Feb 2017 11:00:00 -0600</pubDate>
+        <link>/technology,/philosophy/2017/02/02/Prospecting-Funnel.html</link>
+        <guid isPermaLink="true">/technology,/philosophy/2017/02/02/Prospecting-Funnel.html</guid>
+        
+        
+        <category>Technology,</category>
+        
+        <category>Philosophy</category>
+        
+      </item>
+    
+      <item>
+        <title>The FULL significance of the 12 Factor App mindset</title>
+        <description>&lt;h1 id=&quot;twelve-factor-appshttp12factornet-have-become-absolutely-necessary-in-the-softare-as-a-service-realm--but-there-is-a-lucky-13th-factor-that-is-essential-for-new-work&quot;&gt;&lt;a href=&quot;http://12factor.net/&quot;&gt;Twelve Factor apps&lt;/a&gt; have become absolutely NECESSARY in the softare-as-a-service realm … but there is a LUCKY 13th factor that is essential for NEW work.&lt;/h1&gt;
+&lt;p&gt;The twelve factors given below are not goals; they are requirements.  If we cannot meet the &lt;a href=&quot;http://12factor.net/&quot;&gt;twelve factor&lt;/a&gt; requirements, we should not pollute the world with our careless, reckless, ill-conceived app.  The &lt;a href=&quot;http://12factor.net/&quot;&gt;twelve factor&lt;/a&gt; format is inspired by Martin Fowler’s books &lt;a href=&quot;https://www.safaribooksonline.com/library/view/patterns-of-enterprise/0321127420/&quot;&gt;Patterns of Enterprise Application Architecture and Refactoring&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;But the 12 factors need to reconcieved … in less trusting, less naive, more paranoid manner  that focuses on security rather than feature bloat. A much less trusting mindset is necessary develop more secure, reliable, scalable, survivable system … fundamentally, this means that the back-end datastores must be designed for survivability, in radically more decentralized and more distributed, &lt;em&gt;eg at least CockroachDB, probably blockchain&lt;/em&gt; … the MOST necessary thing about an app happens BEFORE you start PRACTICING WRITING CODE for a new product … BEFORE YOU START monkeying around with code, before you start thinking about architecture, it is important to not just conceive of a new [incrementally-better] product [because that’s what you will do AFTER you have a new product] … the first thing that you must do is reconceive the customers for a new emergent product … the process of becoming [something more], becoming emergent must be and can be continually created, re-created, reconceived.&lt;/p&gt;
+
+&lt;p&gt;This means moving from an “Application Platform-as-a-Service” to a “Container Platform-as-a-Service” to in order to enable &lt;a href=&quot;https://github.com/cockroachdb/cockroach#design&quot;&gt;a more highly distributed SQL database with support for ACID transactions, horizontal scalability and survivability&lt;/a&gt;.  The ultimate intent is a radically more diffuse, distributed, decentralized transaction database using blockchain architecture.  In highly distributed systems [like bitcoin], suspicion, pessimism and paranoia are used as architecture requirements to build highly reliable systems from extremely unreliable, untrustworthy components … which is possible by focusing on the most core elements of a transaction and assuming throughout the design process that all nodes and channels of the network, as well as all bots or participants that might use the system are untrustworthy even potentially malicious.&lt;/p&gt;
+
+&lt;p&gt;But the 12 Factor App mindset STILL matters … let’s look at WHY.&lt;/p&gt;
+
+&lt;h2 id=&quot;i-version-controlled-codebase--blog&quot;&gt;I. Version-Controlled Codebase / Blog&lt;/h2&gt;
+&lt;p&gt;There can be many deployments, but a twelve-factor app is ALWAYS tracked in a version control system, such as Git, Mercurial, or Subversion. ALWAYS! ALWAYS! ALWAYS!  And “ALWAYS!” means that it necessary to center an workflow around the code repositories in version control system … for example, meetings should not be physical, but instead be conducted via repository-centric chat with archived transcripts.&lt;/p&gt;
+
+&lt;h2 id=&quot;ii-dependencies&quot;&gt;II. Dependencies&lt;/h2&gt;
+&lt;p&gt;A twelve-factor app never relies on implicit existence of system-wide packages. It declares all dependencies, completely and exactly, via a dependency declaration manifest.&lt;/p&gt;
+
+&lt;h2 id=&quot;iii-config&quot;&gt;III. Config&lt;/h2&gt;
+&lt;p&gt;The twelve-factor app stores config in environment variables (often shortened to env vars or env). Env vars are easy to change between deploys without changing any code; unlike config files, there is little chance of them being checked into the code repo accidentally. In a twelve-factor app, env vars are granular controls, each fully orthogonal to other env vars. They are never grouped together as “environments”, but instead are independently managed for each deploy.&lt;/p&gt;
+
+&lt;h2 id=&quot;iv-backing-services&quot;&gt;IV. Backing Services&lt;/h2&gt;
+&lt;p&gt;A backing service is any service the app consumes over the network as part of its normal operation. Examples include datastores (such as MySQL or CouchDB), messaging/queueing systems (such as RabbitMQ or Beanstalkd), SMTP services for outbound email (such as Postfix), and caching systems (such as Memcached). The code for a twelve-factor app made no distinction between local and third party services. To the app, both are attached resources, accessed via a URL or other locator/credentials stored in the config … but our new architecture requirements will force to build highly reliable backing service systems from extremely unreliable, untrustworthy components.&lt;/p&gt;
+
+&lt;h2 id=&quot;v-build-release-run&quot;&gt;V. Build, release, run&lt;/h2&gt;
+&lt;p&gt;The twelve-factor app uses strict separation between the build, release, and run stages. Every release should always have a unique release ID, such as a timestamp of the release (such as 2011-04-06-20:32:17) or an incrementing number (such as v100). Releases are an append-only ledger and a release cannot be mutated once it is created. Any change MUST create a new release.&lt;/p&gt;
+
+&lt;h2 id=&quot;vi-processes&quot;&gt;VI. Processes&lt;/h2&gt;
+&lt;p&gt;Twelve-factor processes are necessarily stateless and must be constructed so that they don’t persist and share almost nothing. The rare data that needs to persist must be stored in a stateful backing service, typically a highly-distributed database system. The memory space or filesystem of the process should be used as a momentarily brief, single-transaction cache pulling from a &lt;em&gt;Cockroach-ey&lt;/em&gt; database system with support for ACID transactions, horizontal scalability and survivability](https://github.com/cockroachdb/cockroach#design).&lt;/p&gt;
+
+&lt;h2 id=&quot;vii-port-binding&quot;&gt;VII. Port binding&lt;/h2&gt;
+&lt;p&gt;The twelve-factor app is completely self-contained and does not rely on runtime injection of a webserver into the execution environment to create a web-facing service. Typically, the web app exports HTTP as a service by binding to a port, and listening to requests coming in on that port. HTTP is not the only service that can be exported by port binding. Nearly any kind of server software can be run via a process binding to a port and awaiting incoming requests. Examples include ejabberd (speaking XMPP), and Redis (speaking the Redis protocol).&lt;/p&gt;
+
+&lt;h2 id=&quot;viii-concurrency&quot;&gt;VIII. Concurrency&lt;/h2&gt;
+&lt;p&gt;In the twelve-factor app, processes are a first class citizen. Processes in the twelve-factor app take strong cues from the &lt;a href=&quot;http://adam.herokuapp.com/past/2011/5/9/applying_the_unix_process_model_to_web_apps/&quot;&gt;unix process model for running service daemons&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;ix-disposability&quot;&gt;IX. Disposability&lt;/h2&gt;
+&lt;p&gt;The twelve-factor app’s processes must be disposable and destroyable, meaning they must be started or stopped at a moment’s notice … the more temporary the better. This facilitates fast elastic scaling, rapid deployment of code or config changes, and robustness of production deploys.&lt;/p&gt;
+
+&lt;h2 id=&quot;x-devprod-parity&quot;&gt;X. Dev/prod parity&lt;/h2&gt;
+&lt;p&gt;The twelve-factor app is designed for continuous deployment by making the gap between development and production as small as possible… make the time gap small … make the personnel gap small … make the tools gap small.&lt;/p&gt;
+
+&lt;h2 id=&quot;xi-logs&quot;&gt;XI. Logs&lt;/h2&gt;
+&lt;p&gt;A twelve-factor app never concerns itself with routing or storage of its output stream. It should not attempt to write to or manage logfiles – it must assume that logging will tend to attract malicious use.&lt;/p&gt;
+
+&lt;h2 id=&quot;xii-admin-processes&quot;&gt;XII. Admin processes&lt;/h2&gt;
+&lt;p&gt;Run admin/management tasks as one-off processes. One-off admin processes should be run in an identical environment as the regular long-running processes of the app. They run against a release, using the same codebase and config as any process run against that release. Admin code must ship with application code to avoid synchronization issues.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 01 Jan 2017 11:00:00 -0600</pubDate>
+        <link>/philosophy/2017/01/01/Do-12-Factor-Apps-Still-Matter.html</link>
+        <guid isPermaLink="true">/philosophy/2017/01/01/Do-12-Factor-Apps-Still-Matter.html</guid>
+        
+        
+        <category>Philosophy</category>
+        
+      </item>
+    
+      <item>
+        <title>The state of the economic data industry</title>
+        <description>&lt;p&gt;Not all data are created equally.  Some data really matter because they are the artifacts of serious choice by people with scarce resources to allocate.&lt;/p&gt;
+
+&lt;p&gt;Data that is an artifact of a REAL economic transaction is actually really valuable, by comparison … if we consider things like a search engine requests or some sort of social media inference or psueudo-meaningful quasi-real transaction, eg. a “Like” on FB or LinkedIn or upvote on StackExchange, with sort of just data about potential interests or preferences or even boredom.  Things change significantly when real money gets spent.&lt;/p&gt;
+
+&lt;p&gt;One example of a company nudging in the more meaningful niche in this realm is &lt;a href=&quot;https://metamarkets.com/blog/&quot;&gt;MetaMarkets&lt;/a&gt; which specializes in programmatic ad [and ad buy data, analytics and tracking data, etc] using its own technology stack that is built end-to-end for speed, flexibility, and the power to handle huge volumes of programmatic ad data. Programmatic advertising dwarfs Wall Street in data volume, growth, and complexity. It is arguably one of the most complex marketplaces ever created and it’s still being created everyday.&lt;/p&gt;
+
+&lt;p&gt;Another company with a more active strategy to acquire more valuable data is &lt;a href=&quot;https://www.premise.com/&quot;&gt;Premise&lt;/a&gt;, an economic data collection and aggregation company, which just received &lt;a href=&quot;http://techcrunch.com/2015/09/24/premise-raises-50-million-to-outsource-the-collection-of-economic-data/&quot;&gt;$50 million in series C funding&lt;/a&gt;. Premise is a SaaS provider that uses 25,000 “contributors” in 32 countries and tasks them with photographing and otherwise documenting economic data in order to provide customers like the World Bank with highly valuable information. Premise has boots on the ground who will show up at grocery stores and send back information that Premise’s data analysts then parse.&lt;/p&gt;
+
+&lt;p&gt;There are other opportunities in economic data being created every second; for example, we can think about rapidly emerging communities like crowdfunding or bitcoin that did not exist a decade ago OR we can think about how &lt;a href=&quot;http://www.programmableweb.com/news/5-ways-to-increase-api-adoption/analysis/2015/06/12&quot;&gt;data and data APIs have become the means for building communities and expanding networks&lt;/a&gt;.  Markets that more free than ever is particularly interesting and that is the realm that Salebarn is exploring … things like peer-to-peer distributed exchanges, smart contracts and revolutions that continue to break out in freelancing, remote working, microwork, app hubs and developments like &lt;a href=&quot;https://medium.com/college-cryptocurrency-network/reposium-dco-the-future-of-wikipedia-4be080cfa027&quot;&gt;reposium&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 25 Jun 2016 12:00:00 -0500</pubDate>
+        <link>/data/2016/06/25/MetaMarkets-Economic-Data.html</link>
+        <guid isPermaLink="true">/data/2016/06/25/MetaMarkets-Economic-Data.html</guid>
+        
+        
+        <category>Data</category>
+        
+      </item>
+    
+      <item>
+        <title>Conway&#39;s Law and Why GitHub Matters</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Conway%27s_law&quot;&gt;Conway’s Law&lt;/a&gt; tells us that &lt;em&gt;organizations which design systems … are constrained to produce designs which are copies of the communication structures of these organizations.&lt;/em&gt;  This means that the political organizations and Parties that have been trying to elect political leaders, ie the Democrats, the GOP, the third Party efforts, are all going to fail at changing government because their organizations are inherently corrupted by old politicos, thoroughly calcified and cannot do anything other than produce the same old crap that they always have.&lt;/p&gt;
+
+&lt;p&gt;Hopefully you already an appreciation for the open source distributed version control system &lt;a href=&quot;https://git-scm.com/&quot;&gt;Git&lt;/a&gt; and the &lt;a href=&quot;http://aosabook.org/en/git.html&quot;&gt;history of and rationale behind the development of Git&lt;/a&gt; … and maybe you understand a bit of &lt;a href=&quot;https://www.quora.com/What-makes-GitHub-such-an-important-and-strategic-web-property&quot;&gt;what the GitHub social coding ecosystem is about&lt;/a&gt; or how &lt;a href=&quot;http://www.wired.com/2015/03/github-conquered-google-microsoft-everyone-else/&quot;&gt;GitHub conquered Microsoft and Google and everyone else&lt;/a&gt; and what &lt;a href=&quot;https://help.github.com/articles/be-social/&quot;&gt;being social&lt;/a&gt; and then &lt;a href=&quot;https://developer.github.com/program/&quot;&gt;extending Github platform&lt;/a&gt; is about.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.wired.com/2015/03/github-conquered-google-microsoft-everyone-else/&quot;&gt;Open source socially-produced code has formally now arrived&lt;/a&gt; because the most savvy DevOps engineers thoroughly understand why collaborating on an open source team is not only fun and that the collaborative effort also “moves the ball ahead” for everyone … there’s a private intrinsic reward, but with the &lt;a href=&quot;https://help.github.com/categories/graphs-and-contributions/&quot;&gt;GitHub graphs and contributions metrics&lt;/a&gt; there is also the direct professional recognition [and possible financial reward] that comes from the public trail of commits, pull requests, gists, issues, comments, etc.&lt;/p&gt;
+
+&lt;p&gt;Github is a means to an end, but the MEANS to that end are critically important.  It’s important to reiterate what &lt;a href=&quot;https://en.wikipedia.org/wiki/Conway%27s_law&quot;&gt;Conway’s Law&lt;/a&gt; tells us about &lt;em&gt;organizations which design systems … being constrained to produce designs which are copies of the communication structures of these organizations.&lt;/em&gt;  A solid implementation of market-based technologies that furnish more options and greater choice and transcend government … but that effort is, FIRST and FOREMOST, about creating the technologies that enable a leaner, smaller, saner, less coercive, more reliable government.  That is exactly what is happening right now through open source communication architectures and social production workflows of the type that were designed and built into Git and the GitHub platform and are &lt;a href=&quot;https://developer.github.com/program/&quot;&gt;constantly being extended and improved&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 09 Sep 2015 03:30:00 -0500</pubDate>
+        <link>/technology/2015/09/09/Why-GitHub-Matters.html</link>
+        <guid isPermaLink="true">/technology/2015/09/09/Why-GitHub-Matters.html</guid>
+        
+        
+        <category>Technology</category>
+        
+      </item>
+    
+  </channel>
+</rss>

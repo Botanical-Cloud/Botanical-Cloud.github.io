@@ -1,0 +1,11 @@
+# Site settings
+title: Botanical.Cloud
+email: MarkBruns@MarkBruns.com
+description: Botanical.Cloud podcast
+twitter_username: Botanical.Cloud
+github_username:  Botanical-Cloud
+
+# Build settings
+markdown: kramdown
+
+theme: jekyll-theme-time-machine
