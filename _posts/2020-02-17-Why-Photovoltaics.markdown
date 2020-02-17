@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Why Do We Imagine That Photovoltaics Are Green"
+title:  "Why Do We Even Imagine That Something As Unnatural, Unsustainable Like Photovoltaic Technology Can Be Seen As Somehow Ecologically Green?"
 categories: Technology
 ---
 
